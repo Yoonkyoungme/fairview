@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 // style
 import styled from "styled-components";
@@ -7,15 +8,31 @@ import styled from "styled-components";
 import RateReviewIcon from "@mui/icons-material/RateReview";
 
 const Header = () => {
+  const navigate = useNavigate();
+
+  const handleMainClick = () => {
+    navigate("/");
+  };
+
+  const handleSearchClick = () => {
+    navigate("/search");
+  };
+
+  const handleTopRatedClick = () => {
+    navigate("/top-rated-shops");
+  };
+
   return (
     <HeaderContainer>
       <div className="left-section">
-        <RateReviewIcon />
-        <span className="title">sentimental</span>
+        <RateReviewIcon onClick={handleMainClick} />
+        <span className="title" onClick={handleMainClick}>
+          sentimental
+        </span>
       </div>
       <div className="right-section">
-        <div>가게 검색</div>
-        <div>우수 선발 가게 검색</div>
+        <div onClick={handleSearchClick}>가게 검색</div>
+        <div onClick={handleTopRatedClick}>우수 선발 가게 검색</div>
       </div>
     </HeaderContainer>
   );
