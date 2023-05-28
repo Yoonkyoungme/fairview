@@ -25,6 +25,10 @@ const MainPageContainer = styled.div`
   justify-content: center;
   text-align: center;
   height: calc(100vh - 64px);
+
+  @media (max-width: 768px) {
+    height: calc(100vh - 140px);
+  }
 `;
 
 const Title = styled.div`
@@ -35,6 +39,7 @@ const Title = styled.div`
   margin-bottom: 3%;
 
   @media (max-width: 768px) {
+    margin-bottom: 10%;
     font-size: 2.5rem;
   }
 `;

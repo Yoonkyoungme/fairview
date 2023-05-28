@@ -1,7 +1,14 @@
 import React from "react";
 
+// components
+import Search from "../components/Search";
+
 const SearchPage = () => {
-  return <div>SearchPage</div>;
+  return (
+    <>
+      <Search />
+    </>
+  );
 };
 
 export default SearchPage;
