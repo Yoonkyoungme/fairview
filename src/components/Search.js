@@ -11,11 +11,18 @@ import api from "../services/index";
 
 const Search = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [searchResult, setSearchResult] = useState([]);
+  const [searchResult, setSearchResult] = useState("");
 
   const handleChange = (e) => {
     const value = e.target.value;
     setSearchTerm(value);
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      handleSearch();
+    }
   };
 
   const handleSearch = async () => {
@@ -37,6 +44,7 @@ const Search = () => {
           placeholder="검색어를 입력하세요"
           value={searchTerm}
           onChange={handleChange}
+          onKeyDown={handleKeyDown}
         />
         <StyledButton onClick={handleSearch}>
           <SearchIcon />
