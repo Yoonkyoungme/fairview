@@ -19,15 +19,36 @@ const PlaceButtons = ({ place }) => {
 
   return (
     <Container>
-      <Button brandColor="#03C75A" onClick={() => handleClick(url[0])}>
-        <div>네이버</div>
-      </Button>
-      <Button brandColor="#FFCD00" kakao onClick={() => handleClick(url[1])}>
-        <div>카카오</div>
-      </Button>
-      <Button brandColor="#FF6E05" onClick={() => handleClick(url[2])}>
-        <div>망고플레이트</div>
-      </Button>
+      <ButtonContainer>
+        <Button brandColor="#03C75A" onClick={() => handleClick(url[0])}>
+          <div>네이버</div>
+        </Button>
+        {place === "호호식당 대학로점" ? (
+          <Rating>별점: {data.ratings[0]}</Rating>
+        ) : (
+          <></>
+        )}
+      </ButtonContainer>
+      <ButtonContainer>
+        <Button brandColor="#FFCD00" kakao onClick={() => handleClick(url[1])}>
+          <div>카카오</div>
+        </Button>
+        {place === "호호식당 대학로점" ? (
+          <Rating>별점: {data.ratings[1]}</Rating>
+        ) : (
+          <></>
+        )}
+      </ButtonContainer>
+      <ButtonContainer>
+        <Button brandColor="#FF6E05" onClick={() => handleClick(url[2])}>
+          <div>망고플레이트</div>
+        </Button>
+        {place === "호호식당 대학로점" ? (
+          <Rating>별점: {data.ratings[2]}</Rating>
+        ) : (
+          <></>
+        )}
+      </ButtonContainer>
     </Container>
   );
 };
@@ -45,20 +66,31 @@ const Container = styled.div`
   }
 `;
 
+const ButtonContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
 const Button = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: ${({ brandColor }) => brandColor};
   color: ${({ kakao }) => (kakao ? "black" : "white")};
-  width: 15%;
+  width: 140px;
   height: 70px;
-  margin-top: 4%;
+  margin-top: 30px;
   font-weight: 600;
   border-radius: 10px;
 
   @media (max-width: 768px) {
-    width: 30%;
-    margin-top: 18%;
+    width: 100px;
+    margin-top: 20px;
   }
+`;
+
+const Rating = styled.div`
+  margin-top: 10px;
+  font-size: 14px;
 `;
