@@ -59,6 +59,7 @@ const Container = styled.div`
   display: flex;
   justify-content: space-around;
   width: 60%;
+  margin-top: 2%;
 
   @media (max-width: 768px) {
     width: 80%;

@@ -29,7 +29,7 @@ const ResultGraphContainer = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-top: 8%;
+  margin-top: 10%;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -57,7 +57,7 @@ const Title = styled.div`
   box-shadow: 10px 8px 2px 1px rgba(133, 105, 244, 0.4);
 
   @media (max-width: 768px) {
-    margin-bottom: 0.8rem;
+    margin-bottom: 1.5rem;
   }
 `;
 

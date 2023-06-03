@@ -43,7 +43,7 @@ const WordCloudContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 8%;
+  margin-top: 12%;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -102,5 +102,9 @@ const Image = styled.img`
   max-width: 100%;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  margin-bottom: 60px;
+  margin-bottom: 100px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 60px;
+  }
 `;

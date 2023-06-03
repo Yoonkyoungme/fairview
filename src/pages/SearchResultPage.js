@@ -102,6 +102,7 @@ const RatingText = styled.div`
   padding: 0.5rem 2rem;
   border-radius: 5px;
   box-shadow: 8px 8px 2px 1px rgba(255, 0, 0, 0.3);
+  margin-top: 3%;
 
   @media (max-width: 768px) {
     font-size: 20px;
