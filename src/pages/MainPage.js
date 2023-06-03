@@ -27,7 +27,7 @@ const MainPageContainer = styled.div`
   height: calc(100vh - 64px);
 
   @media (max-width: 768px) {
-    height: calc(100vh - 140px);
+    height: calc(100vh - 160px);
   }
 `;
 

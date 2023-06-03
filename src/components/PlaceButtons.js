@@ -83,6 +83,7 @@ const Button = styled.div`
   margin-top: 30px;
   font-weight: 600;
   border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 
   @media (max-width: 768px) {
     width: 100px;

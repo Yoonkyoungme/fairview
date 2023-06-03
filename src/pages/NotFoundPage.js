@@ -19,6 +19,10 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   height: calc(100vh - 64px);
+
+  @media (max-width: 768px) {
+    height: calc(100vh - 160px);
+  }
 `;
 
 const Title = styled.h1`

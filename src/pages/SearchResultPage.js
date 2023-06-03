@@ -9,6 +9,7 @@ import hoho from "../images/search/hoho.jpg";
 
 // components
 import PlaceButtons from "../components/PlaceButtons";
+import ResultGraph from "../components/ResultGraph";
 
 // style
 import styled from "styled-components";
@@ -27,42 +28,45 @@ const SearchResultPage = () => {
   }, [location]);
 
   return (
-    <StyledContainer>
-      {result && (
-        <>
-          {result.place_name === "호호식당 대학로점" ? (
-            <>
-              <RatingText>재평가 별점: {`${starRating}`}</RatingText>
+    <>
+      <StyledContainer>
+        {result && (
+          <>
+            {result.place_name === "호호식당 대학로점" ? (
+              <>
+                <RatingText>재평가 별점: {`${starRating}`}</RatingText>
+                <StyledCard>
+                  <CardImage
+                    variant="top"
+                    src={hoho}
+                    alt={`${result.place_name} 이미지`}
+                  />
+                  <CardBody>
+                    <CardTitle>{result.place_name}</CardTitle>
+                    <CardItro>{data.intro}</CardItro>
+                  </CardBody>
+                </StyledCard>
+              </>
+            ) : (
               <StyledCard>
                 <CardImage
                   variant="top"
-                  src={hoho}
+                  src={result.image_url}
                   alt={`${result.place_name} 이미지`}
                 />
                 <CardBody>
                   <CardTitle>{result.place_name}</CardTitle>
-                  <CardItro>{data.intro}</CardItro>
+                  <CardText>위치: {`${result.address_name}`}</CardText>
+                  <CardText>전화번호: {`${result.phone}`}</CardText>
                 </CardBody>
               </StyledCard>
-            </>
-          ) : (
-            <StyledCard>
-              <CardImage
-                variant="top"
-                src={result.image_url}
-                alt={`${result.place_name} 이미지`}
-              />
-              <CardBody>
-                <CardTitle>{result.place_name}</CardTitle>
-                <CardText>위치: {`${result.address_name}`}</CardText>
-                <CardText>전화번호: {`${result.phone}`}</CardText>
-              </CardBody>
-            </StyledCard>
-          )}
-          <PlaceButtons place={result.place_name} />
-        </>
-      )}
-    </StyledContainer>
+            )}
+            <PlaceButtons place={result.place_name} />
+          </>
+        )}
+      </StyledContainer>
+      {result?.place_name === "호호식당 대학로" && <ResultGraph />}
+    </>
   );
 };
 
@@ -74,7 +78,6 @@ const StyledContainer = styled.div`
   height: calc(100vh - 64px);
 
   @media (max-width: 768px) {
-    height: calc(100vh - 140px);
   }
 `;
 
@@ -83,6 +86,10 @@ const RatingText = styled.div`
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 1.5%;
+  background-color: white;
+  padding: 0.5rem 2rem;
+  border-radius: 5px;
+  box-shadow: 8px 8px 2px 1px rgba(255, 0, 0, 0.3);
 
   @media (max-width: 768px) {
     font-size: 20px;
@@ -98,6 +105,10 @@ const StyledCard = styled(Card)`
 
   @media (max-width: 768px) {
     margin: 10px 0;
+  }
+
+  @media (max-height: 667px) {
+    width: 80%;
   }
 `;
 
