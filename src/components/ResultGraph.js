@@ -35,6 +35,7 @@ const ResultGraphContainer = styled.div`
     flex-direction: column;
   }
 `;
+
 const GraphWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -61,7 +62,7 @@ const Title = styled.div`
 `;
 
 const GraphImage = styled.img`
-  width: ${({ revisit }) => (revisit ? "400px" : "320px")};
+  width: ${({ revisit }) => (revisit ? "460px" : "320px")};
   height: 360px;
   max-width: 100%;
   border-radius: 10px;

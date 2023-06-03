@@ -10,6 +10,7 @@ import hoho from "../images/search/hoho.jpg";
 // components
 import PlaceButtons from "../components/PlaceButtons";
 import ResultGraph from "../components/ResultGraph";
+import ResultWordCloud from "../components/ResultWordCloud";
 
 // style
 import styled from "styled-components";
@@ -65,7 +66,12 @@ const SearchResultPage = () => {
           </>
         )}
       </StyledContainer>
-      {result?.place_name === "호호식당 대학로" && <ResultGraph />}
+      {result?.place_name === "호호식당 대학로점" && (
+        <>
+          <ResultGraph />
+          <ResultWordCloud />
+        </>
+      )}
     </>
   );
 };
@@ -76,8 +82,10 @@ const StyledContainer = styled.div`
   justify-content: center;
   align-items: center;
   height: calc(100vh - 64px);
+  padding-top: 80px;
 
   @media (max-width: 768px) {
+    padding-top: 140px;
   }
 `;
 
