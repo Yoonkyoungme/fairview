@@ -87,6 +87,10 @@ const StyledContainer = styled.div`
   @media (max-width: 768px) {
     padding-top: 140px;
   }
+
+  @media (max-height: 740px) {
+    padding-top: 20rem;
+  }
 `;
 
 const RatingText = styled.div`
@@ -115,7 +119,7 @@ const StyledCard = styled(Card)`
     margin: 10px 0;
   }
 
-  @media (max-height: 667px) {
+  @media (max-height: 770px) {
     width: 80%;
   }
 `;

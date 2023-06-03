@@ -29,10 +29,14 @@ const ResultGraphContainer = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 64px);
+  margin-top: 8%;
 
   @media (max-width: 768px) {
     flex-direction: column;
+  }
+
+  @media (max-height: 740px) {
+    padding-top: 10rem;
   }
 `;
 
@@ -41,10 +45,6 @@ const GraphWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   margin: 2rem;
-
-  @media (max-height: 667px) {
-    margin: 0.5rem;
-  }
 `;
 
 const Title = styled.div`
