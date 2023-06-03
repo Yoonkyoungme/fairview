@@ -5,7 +5,10 @@ import { useLocation } from "react-router-dom";
 import data from "../data/hoho_data.json";
 
 // images
-import hoho from "../images/hoho.jpg";
+import hoho from "../images/search/hoho.jpg";
+
+// components
+import PlaceButtons from "../components/PlaceButtons";
 
 // style
 import styled from "styled-components";
@@ -28,18 +31,20 @@ const SearchResultPage = () => {
       {result && (
         <>
           {result.place_name === "호호식당 대학로점" ? (
-            <StyledCard>
-              <CardImage
-                variant="top"
-                src={hoho}
-                alt={`${result.place_name} 이미지`}
-              />
-              <CardBody>
-                <CardTitle>{result.place_name}</CardTitle>
-                <CardItro>{data.intro}</CardItro>
-                <RatingText>재평가 별점: {`${starRating}`} / 100</RatingText>
-              </CardBody>
-            </StyledCard>
+            <>
+              <RatingText>재평가 별점: {`${starRating}`}</RatingText>
+              <StyledCard>
+                <CardImage
+                  variant="top"
+                  src={hoho}
+                  alt={`${result.place_name} 이미지`}
+                />
+                <CardBody>
+                  <CardTitle>{result.place_name}</CardTitle>
+                  <CardItro>{data.intro}</CardItro>
+                </CardBody>
+              </StyledCard>
+            </>
           ) : (
             <StyledCard>
               <CardImage
@@ -54,6 +59,7 @@ const SearchResultPage = () => {
               </CardBody>
             </StyledCard>
           )}
+          <PlaceButtons place={result.place_name} />
         </>
       )}
     </StyledContainer>
@@ -62,14 +68,24 @@ const SearchResultPage = () => {
 
 const StyledContainer = styled.div`
   display: flex;
-  justify-content: flex-start;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 8%;
+  height: calc(100vh - 64px);
 
   @media (max-width: 768px) {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    height: calc(100vh - 140px);
+  }
+`;
+
+const RatingText = styled.div`
+  color: red;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 1.5%;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
   }
 `;
 
@@ -78,7 +94,7 @@ const StyledCard = styled(Card)`
   max-width: 360px;
   margin: 10px;
   border-radius: 16px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 
   @media (max-width: 768px) {
     margin: 10px 0;
@@ -98,7 +114,12 @@ const CardBody = styled(Card.Body)`
 
 const CardTitle = styled(Card.Title)`
   font-weight: bold;
+  font-size: 24px;
   margin-bottom: 8%;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
 `;
 
 const CardText = styled(Card.Text)`
@@ -108,10 +129,10 @@ const CardText = styled(Card.Text)`
 const CardItro = styled(Card.Text)`
   font-size: 14px;
   margin-bottom: 5%;
-`;
 
-const RatingText = styled.div`
-  font-weight: bold;
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
 `;
 
 export default SearchResultPage;
