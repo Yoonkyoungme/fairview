@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
 // pages
@@ -21,6 +21,7 @@ import api from "../../services/index";
 
 const Search = () => {
   const navigate = useNavigate();
+  const inputRef = useRef(null);
 
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResult, setSearchResult] = useState("");
@@ -54,6 +55,10 @@ const Search = () => {
     }
   }, [searchResult, navigate]);
 
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []);
+
   return (
     <StyledSearchContainer>
       <StyledTitle>FAIRVIEW</StyledTitle>
@@ -64,6 +69,7 @@ const Search = () => {
           value={searchTerm}
           onChange={handleChange}
           onKeyDown={handleKeyDown}
+          ref={inputRef}
         />
         <StyledButton onClick={handleSearch}>
           <SearchIcon />
