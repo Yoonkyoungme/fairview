@@ -4,7 +4,7 @@ import React from "react";
 import styled from "styled-components";
 
 // images
-import positive from "../../images/analysis/positive-negative_graph.jpg";
+import positive from "../../images/analysis/wordcloud_positive.jpg";
 import neutral from "../../images/analysis/wordcloud_neutral.jpg";
 import negative from "../../images/analysis/wordcloud_negative.jpg";
 
