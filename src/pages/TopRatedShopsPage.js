@@ -1,9 +1,14 @@
 import React from "react";
 
 // components
+import TopRatedSearch from "../components/top-rated/TopRatedSearch";
 
 const TopRatedShopsPage = () => {
-  return <div>TopRatedShopsPage</div>;
+  return (
+    <>
+      <TopRatedSearch />
+    </>
+  );
 };
 
 export default TopRatedShopsPage;

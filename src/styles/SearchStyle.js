@@ -9,7 +9,7 @@ export const StyledSearchContainer = styled.div`
 `;
 
 export const StyledTitle = styled.div`
-  font-size: 4rem;
+  font-size: 2.3rem;
   font-weight: bold;
   color: #260077;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
@@ -17,7 +17,7 @@ export const StyledTitle = styled.div`
 
   @media (max-width: 768px) {
     margin-bottom: 10%;
-    font-size: 2.5rem;
+    font-size: 2em;
   }
 `;
 
@@ -35,6 +35,7 @@ export const StyledInput = styled.input`
   width: 35%;
   height: 50px;
   text-align: center;
+  border: none;
 
   @media (max-width: 768px) {
     width: 80%;
@@ -46,6 +47,9 @@ export const StyledButton = styled.button`
   padding: 5px 10px;
   border-radius: 8px;
   height: 50px;
+  background-color: white;
+  border: none;
+  outline: none;
 
   @media (max-width: 768px) {
     height: 40px;

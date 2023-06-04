@@ -10,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background: linear-gradient(to bottom, #D5C7FF, #FFFFFF);
+    background: linear-gradient(to bottom, #D5C7FF, #F1EDFD);
   }
   
   

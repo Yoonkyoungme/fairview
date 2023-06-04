@@ -61,7 +61,7 @@ const Search = () => {
 
   return (
     <StyledSearchContainer>
-      <StyledTitle>FAIRVIEW</StyledTitle>
+      <StyledTitle>방문 매장 검색</StyledTitle>
       <StyledSearchWrapper>
         <StyledInput
           type="text"

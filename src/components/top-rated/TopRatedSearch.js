@@ -12,12 +12,15 @@ import {
 // icon
 import SearchIcon from "@mui/icons-material/Search";
 
-const DeliverySearch = () => {
+const TopRatedSearch = () => {
   return (
     <StyledSearchContainer>
-      <StyledTitle>배달 매장 검색</StyledTitle>
+      <StyledTitle>우수 선발 가게 검색</StyledTitle>
       <StyledSearchWrapper>
-        <StyledInput type="text" placeholder="배달 시킬 식당을 입력해주세요." />
+        <StyledInput
+          type="text"
+          placeholder="'식당 이름_지역' 형식으로 입력해주세요."
+        />
         <StyledButton>
           <SearchIcon />
         </StyledButton>
@@ -26,4 +29,4 @@ const DeliverySearch = () => {
   );
 };
 
-export default DeliverySearch;
+export default TopRatedSearch;

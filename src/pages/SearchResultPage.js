@@ -97,6 +97,12 @@ const RatingText = styled.div`
 
   @media (max-width: 768px) {
     font-size: 20px;
+    margin-top: 100px;
+  }
+
+  @media (max-height: 740px) {
+    font-size: 20px;
+    margin-top: 250px;
   }
 `;
 
