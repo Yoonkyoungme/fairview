@@ -9,6 +9,7 @@ import MainPage from "./pages/MainPage";
 import SearchPage from "./pages/SearchPage";
 import SearchResultPage from "./pages/SearchResultPage";
 import TopRatedShopsPage from "./pages/TopRatedShopsPage";
+import TopRatedShopsResultPage from "./pages/TopRatedShopsResultPage";
 import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
@@ -20,6 +21,10 @@ function App() {
         <Route path="/search" element={<SearchPage />} />
         <Route path="/search-result" element={<SearchResultPage />} />
         <Route path="/top-rated-shops" element={<TopRatedShopsPage />} />
+        <Route
+          path="/top-rated-shops-result"
+          element={<TopRatedShopsResultPage />}
+        />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </>
