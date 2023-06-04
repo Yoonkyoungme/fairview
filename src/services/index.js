@@ -19,6 +19,6 @@ const checkNetworkStatus = async () => {
   }
 };
 
-checkNetworkStatus();
+// checkNetworkStatus();
 
 export default api;

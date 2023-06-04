@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+
 // data
-import data from "../data/hoho_data.json";
+import data from "../../data/hoho_data.json";
 
 const PlaceButtons = ({ place }) => {
   let url = [

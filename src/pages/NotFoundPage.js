@@ -18,12 +18,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - 64px);
-  padding-top: 160px;
-
-  @media (max-width: 768px) {
-    height: calc(100vh - 160px);
-  }
+  height: 100vh;
 `;
 
 const Title = styled.h1`

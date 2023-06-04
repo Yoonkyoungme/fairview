@@ -10,8 +10,9 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: #F1EDFD;
+    background: linear-gradient(to bottom, #D5C7FF, #FFFFFF);
   }
+  
   
   li {
     list-style: none;

@@ -24,12 +24,7 @@ const MainPageContainer = styled.div`
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: calc(100vh - 64px);
-  padding-top: 160px;
-
-  @media (max-width: 768px) {
-    height: calc(100vh - 160px);
-  }
+  height: 100vh;
 `;
 
 const Title = styled.div`

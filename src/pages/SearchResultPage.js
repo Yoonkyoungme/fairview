@@ -8,9 +8,9 @@ import data from "../data/hoho_data.json";
 import hoho from "../images/search/hoho.jpg";
 
 // components
-import PlaceButtons from "../components/PlaceButtons";
-import ResultGraph from "../components/ResultGraph";
-import ResultWordCloud from "../components/ResultWordCloud";
+import PlaceButtons from "../components/search/PlaceButtons";
+import ResultGraph from "../components/search/ResultGraph";
+import ResultWordCloud from "../components/search/ResultWordCloud";
 
 // style
 import styled from "styled-components";
@@ -81,16 +81,7 @@ const StyledContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 64px);
-  padding-top: 80px;
-
-  @media (max-width: 768px) {
-    padding-top: 140px;
-  }
-
-  @media (max-height: 740px) {
-    padding-top: 20rem;
-  }
+  height: 100vh;
 `;
 
 const RatingText = styled.div`

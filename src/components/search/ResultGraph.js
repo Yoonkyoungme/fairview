@@ -4,8 +4,8 @@ import React from "react";
 import styled from "styled-components";
 
 // images
-import graph1 from "../images/analysis/positive-negative_graph.jpg";
-import graph2 from "../images/analysis/revisit-rate_graph.jpg";
+import graph1 from "../../images/analysis/positive-negative_graph.jpg";
+import graph2 from "../../images/analysis/revisit-rate_graph.jpg";
 
 const ResultGraph = () => {
   return (
