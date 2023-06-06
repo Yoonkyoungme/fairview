@@ -40,10 +40,13 @@ const Search = () => {
 
   const handleSearch = async () => {
     try {
-      const response = await api.get(`place/${searchTerm}`);
-      const searchData = response.data;
+      const response = await api.get("/v1/search/local.json", {
+        params: {
+          query: searchTerm,
+        },
+      });
+      const searchData = response.data.items;
       setSearchResult(searchData);
-      // console.log(searchData);
     } catch (error) {
       console.error("검색 중 오류 발생:", error);
     }

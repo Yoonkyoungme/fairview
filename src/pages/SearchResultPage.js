@@ -19,12 +19,16 @@ import Card from "react-bootstrap/Card";
 const SearchResultPage = () => {
   const location = useLocation();
   const [result, setResult] = useState(null);
+  const [place, setPlace] = useState("");
 
   const starRating = data.star_rating.toFixed(2);
 
   useEffect(() => {
     if (location.state && location.state.searchResult) {
-      setResult(location.state.searchResult);
+      const data = location.state.searchResult[0];
+      setResult(data);
+      setPlace(data.title.replace(/<[^>]+>/g, ""));
+      console.log("결과", result);
     }
   }, [location]);
 
@@ -33,18 +37,17 @@ const SearchResultPage = () => {
       <StyledContainer>
         {result && (
           <>
-            {result.place_name === "호호식당 대학로점" ? (
+            {place === "호호식당 대학로" ? (
               <>
                 <RatingText>재평가 별점: {`${starRating}`}</RatingText>
                 <StyledCard>
-                  <CardImage
-                    variant="top"
-                    src={hoho}
-                    alt={`${result.place_name} 이미지`}
-                  />
+                  <CardImage variant="top" src={hoho} alt={`${place} 이미지`} />
                   <CardBody>
-                    <CardTitle>{result.place_name}</CardTitle>
+                    <CardTitle>{place}</CardTitle>
                     <CardItro>{data.intro}</CardItro>
+                    <CardItro>
+                      Link: <a href={result.link}>{result.link}</a>
+                    </CardItro>
                   </CardBody>
                 </StyledCard>
               </>
@@ -53,12 +56,14 @@ const SearchResultPage = () => {
                 <CardImage
                   variant="top"
                   src={result.image_url}
-                  alt={`${result.place_name} 이미지`}
+                  alt={`${place} 이미지`}
                 />
                 <CardBody>
-                  <CardTitle>{result.place_name}</CardTitle>
-                  <CardText>위치: {`${result.address_name}`}</CardText>
-                  <CardText>전화번호: {`${result.phone}`}</CardText>
+                  <CardTitle>{place}</CardTitle>
+                  <CardItro>위치: {`${result.address}`}</CardItro>
+                  <CardItro>
+                    Link: <a href={result.link}>{result.link}</a>
+                  </CardItro>
                 </CardBody>
               </StyledCard>
             )}
@@ -66,7 +71,7 @@ const SearchResultPage = () => {
           </>
         )}
       </StyledContainer>
-      {result?.place_name === "호호식당 대학로점" && (
+      {place === "호호식당 대학로" && (
         <>
           <ResultGraph />
           <ResultWordCloud />

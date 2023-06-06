@@ -2,10 +2,12 @@ import axios from "axios";
 
 // Axios 인스턴스 생성
 const api = axios.create({
-  baseURL: process.env.REACT_APP_BASEURL,
+  // baseURL: "/v1/search/local.json",
   headers: {
     "Content-Type": "application/json",
     withCredentials: true,
+    "X-Naver-Client-Id": process.env.REACT_APP_CLIENT_ID,
+    "X-Naver-Client-Secret": process.env.REACT_APP_CLIENT_SECRET,
   },
 });
 
