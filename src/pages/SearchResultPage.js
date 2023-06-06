@@ -28,7 +28,7 @@ const SearchResultPage = () => {
       const data = location.state.searchResult[0];
       setResult(data);
       setPlace(data.title.replace(/<[^>]+>/g, ""));
-      console.log("결과", result);
+      // console.log("결과", result);
     }
   }, [location]);
 
@@ -46,7 +46,10 @@ const SearchResultPage = () => {
                     <CardTitle>{place}</CardTitle>
                     <CardItro>{data.intro}</CardItro>
                     <CardItro>
-                      Link: <a href={result.link}>{result.link}</a>
+                      Link:{" "}
+                      <a href={result.link} target="_blank">
+                        {result.link}
+                      </a>
                     </CardItro>
                   </CardBody>
                 </StyledCard>
@@ -61,13 +64,16 @@ const SearchResultPage = () => {
                   <CardItro>위치: {`${result.address}`}</CardItro>
                   {result.link && (
                     <CardItro>
-                      Link: <a href={result.link}>{result.link}</a>
+                      Link:{" "}
+                      <a href={result.link} target="_blank">
+                        {result.link}
+                      </a>
                     </CardItro>
                   )}
                 </CardBody>
               </StyledCard>
             )}
-            <PlaceButtons place={result.place_name} />
+            <PlaceButtons place={place} />
           </>
         )}
       </StyledContainer>

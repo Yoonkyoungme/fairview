@@ -11,7 +11,7 @@ const PlaceButtons = ({ place }) => {
     "https://www.mangoplate.com",
   ];
 
-  if (place === "호호식당 대학로점") {
+  if (place === "호호식당 대학로") {
     url = data.url;
   }
   const handleClick = (url) => {
@@ -24,7 +24,7 @@ const PlaceButtons = ({ place }) => {
         <Button brandColor="#03C75A" onClick={() => handleClick(url[0])}>
           <div>네이버</div>
         </Button>
-        {place === "호호식당 대학로점" ? (
+        {place === "호호식당 대학로" ? (
           <Rating>별점: {data.ratings[0]}</Rating>
         ) : (
           <></>
@@ -34,7 +34,7 @@ const PlaceButtons = ({ place }) => {
         <Button brandColor="#FFCD00" kakao onClick={() => handleClick(url[1])}>
           <div>카카오</div>
         </Button>
-        {place === "호호식당 대학로점" ? (
+        {place === "호호식당 대학로" ? (
           <Rating>별점: {data.ratings[1]}</Rating>
         ) : (
           <></>
@@ -44,7 +44,7 @@ const PlaceButtons = ({ place }) => {
         <Button brandColor="#FF6E05" onClick={() => handleClick(url[2])}>
           <div>망고플레이트</div>
         </Button>
-        {place === "호호식당 대학로점" ? (
+        {place === "호호식당 대학로" ? (
           <Rating>별점: {data.ratings[2]}</Rating>
         ) : (
           <></>
