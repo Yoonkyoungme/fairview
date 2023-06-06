@@ -27,7 +27,7 @@ const SearchResultPage = () => {
     if (location.state && location.state.searchResult) {
       const data = location.state.searchResult[0];
       setResult(data);
-      setPlace(data.title.replace(/<[^>]+>/g, ""));
+      setPlace(data.title.replace(/<[^>]+>|&amp;/g, ""));
       // console.log("결과", result);
     }
   }, [location]);
