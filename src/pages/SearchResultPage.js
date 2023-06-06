@@ -53,17 +53,17 @@ const SearchResultPage = () => {
               </>
             ) : (
               <StyledCard>
-                <CardImage
-                  variant="top"
-                  src={result.image_url}
-                  alt={`${place} 이미지`}
-                />
                 <CardBody>
                   <CardTitle>{place}</CardTitle>
+                  {result.category && (
+                    <CardItro>분류: {`${result.category}`}</CardItro>
+                  )}
                   <CardItro>위치: {`${result.address}`}</CardItro>
-                  <CardItro>
-                    Link: <a href={result.link}>{result.link}</a>
-                  </CardItro>
+                  {result.link && (
+                    <CardItro>
+                      Link: <a href={result.link}>{result.link}</a>
+                    </CardItro>
+                  )}
                 </CardBody>
               </StyledCard>
             )}
