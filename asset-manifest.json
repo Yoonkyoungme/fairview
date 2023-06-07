@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.js": "/sentimental/static/js/main.44679b4f.js",
-    "static/js/787.1c230288.chunk.js": "/sentimental/static/js/787.1c230288.chunk.js",
-    "static/media/hanjung.jpg": "/sentimental/static/media/hanjung.1c968d9bd5a82f06f28c.jpg",
-    "static/media/hongkong.jpg": "/sentimental/static/media/hongkong.1f0fb7555b576139299d.jpg",
-    "static/media/hoho.jpg": "/sentimental/static/media/hoho.d2233294bc8ed32a5a1c.jpg",
-    "static/media/wordcloud_positive.jpg": "/sentimental/static/media/wordcloud_positive.20ceecf5845a185af758.jpg",
-    "static/media/panda.jpg": "/sentimental/static/media/panda.5feb3516554655744fdb.jpg",
-    "static/media/wordcloud_negative.jpg": "/sentimental/static/media/wordcloud_negative.b9fb3cdefad8b88fed81.jpg",
-    "static/media/wordcloud_neutral.jpg": "/sentimental/static/media/wordcloud_neutral.bddfd0d60e18c7ac35f8.jpg",
-    "static/media/positive-negative_graph.jpg": "/sentimental/static/media/positive-negative_graph.9d8b65585144740ddc63.jpg",
-    "static/media/revisit-rate_graph.jpg": "/sentimental/static/media/revisit-rate_graph.55dcca6043d24f36ed58.jpg",
-    "index.html": "/sentimental/index.html",
-    "main.44679b4f.js.map": "/sentimental/static/js/main.44679b4f.js.map",
-    "787.1c230288.chunk.js.map": "/sentimental/static/js/787.1c230288.chunk.js.map"
+    "main.js": "/fairview/static/js/main.5920f1c2.js",
+    "static/js/787.c263d82f.chunk.js": "/fairview/static/js/787.c263d82f.chunk.js",
+    "static/media/hanjung.jpg": "/fairview/static/media/hanjung.1c968d9bd5a82f06f28c.jpg",
+    "static/media/hongkong.jpg": "/fairview/static/media/hongkong.1f0fb7555b576139299d.jpg",
+    "static/media/hoho.jpg": "/fairview/static/media/hoho.d2233294bc8ed32a5a1c.jpg",
+    "static/media/wordcloud_positive.jpg": "/fairview/static/media/wordcloud_positive.20ceecf5845a185af758.jpg",
+    "static/media/panda.jpg": "/fairview/static/media/panda.5feb3516554655744fdb.jpg",
+    "static/media/wordcloud_negative.jpg": "/fairview/static/media/wordcloud_negative.b9fb3cdefad8b88fed81.jpg",
+    "static/media/wordcloud_neutral.jpg": "/fairview/static/media/wordcloud_neutral.bddfd0d60e18c7ac35f8.jpg",
+    "static/media/positive-negative_graph.jpg": "/fairview/static/media/positive-negative_graph.9d8b65585144740ddc63.jpg",
+    "static/media/revisit-rate_graph.jpg": "/fairview/static/media/revisit-rate_graph.55dcca6043d24f36ed58.jpg",
+    "index.html": "/fairview/index.html",
+    "main.5920f1c2.js.map": "/fairview/static/js/main.5920f1c2.js.map",
+    "787.c263d82f.chunk.js.map": "/fairview/static/js/787.c263d82f.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.44679b4f.js"
+    "static/js/main.5920f1c2.js"
   ]
 }
