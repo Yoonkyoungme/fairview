@@ -1,8 +1,8 @@
 {
-  "name": "sentimental",
+  "name": "fairview",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://yoonkyoungme.github.io/sentimental",
+  "homepage": "https://yoonkyoungme.github.io/fairview",
   "dependencies": {
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
