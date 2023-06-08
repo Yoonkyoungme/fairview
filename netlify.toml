@@ -1,4 +1,10 @@
 [[redirects]]
+from = "https://gbt-fairview.netlify.app/search-result"
+  to = "https://gbt-fairview.netlify.app/search-result"  
+  status = 200
+  force = true
+
+[[redirects]]
 from = "/naver_search_proxy/*"
   to = "https://openapi.naver.com/:splat"  
   status = 200
