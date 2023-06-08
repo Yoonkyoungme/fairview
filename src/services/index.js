@@ -1,8 +1,11 @@
 import axios from "axios";
 
+const naver_search_proxy =
+  window.location.hostname === "localhost" ? "" : "/naver_search_proxy";
+
 // Axios 인스턴스 생성
 const api = axios.create({
-  // baseURL: "/v1/search/local.json",
+  baseURL: `${naver_search_proxy}`,
   headers: {
     "Content-Type": "application/json",
     withCredentials: true,
@@ -21,6 +24,6 @@ const checkNetworkStatus = async () => {
   }
 };
 
-// checkNetworkStatus();
+checkNetworkStatus();
 
 export default api;

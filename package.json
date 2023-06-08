@@ -2,7 +2,7 @@
   "name": "fairview",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://yoonkyoungme.github.io/fairview",
+  "homepage": "https://gbt-fairview.netlify.app",
   "dependencies": {
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
@@ -24,7 +24,6 @@
     "styled-reset": "^4.4.7",
     "web-vitals": "^2.1.4"
   },
-  "proxy": "https://openapi.naver.com",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
