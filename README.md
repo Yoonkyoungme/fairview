@@ -1,70 +1,23 @@
-# Getting Started with Create React App
+## 🎓 HUFS GBT Capstone Design
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+한국외대 GBT 학부 졸업 캡스톤 디자인 프로젝트
 
-## Available Scripts
+<br>
 
-In the project directory, you can run:
+## ⚒️ 주요 기능
 
-### `npm start`
+|                                                                                                                         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| :---------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <img src="https://github.com/Yoonkyoungme/fairview/assets/100656920/eaa926ee-480f-4bb2-b10d-8dc5bf2a79ac" width="100%"> | **[매장 가게 검색] 사용자가 검색한 가게가 "호호식당 대학로"인 경우** <br> <br> <li>매장 가게 검색 결과 페이지는 네이버 검색 API를 활용하여 사용자가 검색한 가게의 결과값을 보여줍니다. (가게의 제목(title), 주소(address), 링크(link) 정보가 표시됩니다.) <li>가게 업체 사진과 감정 분석을 통해 재평가된 별점 정보, 데이터 분석을 통해 도출된 워드 클라우드, 긍정-부정 그래프, 재방문율 그래프를 보여줍니다. 이러한 데이터는 JSON 파일로 저장되어 있으며, 필요한 데이터는 해당 파일을 import하여 사용하였습니다. <li> 네이버, 카카오, 망고플레이트 버튼을 클릭하면 각 사이트의 리뷰 페이지로 이동할 수 있습니다. 이를 통해 사용자는 해당 가게에 대한 리뷰를 더 자세히 확인할 수 있습니다. |
+|                                                                                                                         |
+| <img src="https://github.com/Yoonkyoungme/fairview/assets/100656920/a5820280-521e-41e2-8279-c9f4fef820bc" width="100%"> | **[매장 가게 검색] 사용자가 검색한 가게가 "호호식당 대학로"가 아닌 경우** <br> <br> <li> 매장 가게 검색 결과 페이지는 네이버 검색 API를 활용하여 사용자가 검색한 가게의 결과값을 보여줍니다. (가게의 제목(title), 분류(category), 주소(address), 링크(link) 정보가 표시됩니다.) <li> 네이버, 카카오, 망고플레이트 버튼을 클릭하면 각각 네이버 플레이스, 카카오맵, 망고플레이트 사이트의 "기본 경로"로 이동할 수 있습니다.                                                                                                                                                                                                                                                                 |
+| <img src="https://github.com/Yoonkyoungme/fairview/assets/100656920/54465e4a-e608-480a-8f3f-ad72e59674a4" width="100%"> | **[우수 선발 가게 검색]** <br> <br> <li> 우수 선발 가게 검색 페이지는 현재 감정 분석으로 재평가된 가게 중 대전 문화동에 위치한 마라탕 가게 3곳을 대상으로 구현되었습니다. 따라서 "마라탕\_대전 문화점"을 입력했을 때만 결과 페이지로 이동합니다. <li> 이외의 검색어를 입력했을 때는 alert 창이 나타나며, 해당 메시지를 확인하여 올바른 가게 이름을 입력하도록 안내됩니다.                                                                                                                                                                                                                                                                                                                 |
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<br>
+<br>
+  
+  
+## 📱 Mobile UI
+| 방문 가게 검색 - 호호식당 대학로                                                                                        | 방문 가게 검색                                                                                     | 우수 선발 가게                                                                        |
+| :-------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: |
+| ![방문 가게 검색-호호식당 대학로](https://github.com/Yoonkyoungme/fairview/assets/100656920/16ef4536-8434-45a8-a239-4b05b19ad7eb) | ![방문 가게 검색](https://github.com/Yoonkyoungme/fairview/assets/100656920/5e278b71-c3e4-4d98-b9d2-5ef36f9747eb) | ![우수 선발 가게](https://github.com/Yoonkyoungme/fairview/assets/100656920/659a577f-64fa-43b2-8978-cc58e28ec2df) |
