@@ -2,6 +2,8 @@
 
 한국외대 GBT 학부 졸업 캡스톤 디자인 프로젝트
 
+서비스 링크: https://gbt-fairview.netlify.app
+
 <br>
 
 ## ⚒️ 주요 기능
